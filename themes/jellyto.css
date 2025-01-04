@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/round.css");
+
 :root {
   /* Primary Colors */
   --primary-100: #e5e5e5;
@@ -51,13 +53,119 @@
   /* Background Colors */
   --bg-light: #f9fafb; /* Light background */
   --bg-dark: #0d0d0d; /* Dark background */
+  --sidebar-bg: #18181b; /* Sidebar background */
+  --sidebar-border: #202023; /* Sidebar border */
+
+  --main-drawer-button-margin: 0px;
 }
 
 .backgroundContainer,
-.mainDrawer,
 .drawer-open,
 .nowPlayingPlaylist,
 .nowPlayingContextMenu,
 html {
-  background-color: var(--bg-light);
+  background-color: var(--bg-dark);
+}
+
+/* Transparent top menu */
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {
+  background: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {
+  background: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.headerTabs.sectionTabs {
+  text-size-adjust: 110%;
+  font-size: 110%;
+}
+.pageTitle {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.emby-tab-button {
+  padding: 1.75em 1.7em;
+}
+
+.mainDrawer {
+  left: 0 !important;
+  top: 0;
+  width: 95px !important;
+  transition: all 0.3s ease-in-out;
+  border-right: var(--sidebar-border) solid 1px;
+  background-color: var(--sidebar-bg) !important;
+  z-index: 100;
+}
+
+.drawer-open {
+  transform: translateX(0px) !important;
+}
+.mainDrawer.drawer-open {
+  width: 300px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.tmla-mask.backdrop {
+  display: none;
+}
+
+.mainDrawerButton {
+  margin-left: 0px;
+  transition: margin-left 0.5s ease;
+}
+
+.drawer-open ~ .skinHeader .mainDrawerButton {
+  margin-left: 210px;
+}
+
+.layout-desktop .libraryPage:not(#editItemMetadataPage) {
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Sidebar movement */
+.layout-desktop:has(.drawer-open) .libraryPage:not(#editItemMetadataPage) {
+  translate: 135px;
+  transition: all 0.3s ease-in-out;
+}
+
+h3.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
+  display: none !important;
+}
+
+span.navMenuOptionText {
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+}
+
+h3.sidebarHeader {
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+}
+
+.drawer-open > div > div .sidebarHeader {
+  visibility: visible;
+  transition: visibility 0.3s ease;
+}
+.drawer-open > div > div .navMenuOptionText {
+  visibility: visible;
+  transition: visibility 0.3s ease;
+}
+.headerRight {
+  translate: -100px;
+}
+
+.skinHeader {
+  translate: 100px;
+}
+
+.emby-tab-button.emby-button {
+  margin-right: 100px;
+}
+
+.featurediframe {
+  padding-left: 40px !important;
 }
