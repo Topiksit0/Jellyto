@@ -1,0 +1,63 @@
+:root {
+  /* Primary Colors */
+  --primary-100: #e5e5e5;
+  --primary-300: #a3a3a3;
+  --primary-500: #636363; /* Base primary color */
+  --primary-700: #404040;
+  --primary-900: #0d0d0d; /* Darkest shade, main background */
+
+  /* Neutral Colors */
+  --neutral-100: #f4f4f5;
+  --neutral-300: #d4d4d8;
+  --neutral-500: #a1a1aa; /* Neutral base */
+  --neutral-700: #52525b;
+  --neutral-900: #27272a;
+
+  /* Accent Colors */
+  --accent-100: #e0f2fe;
+  --accent-300: #7dd3fc;
+  --accent-500: #38bdf8; /* Accent base */
+  --accent-700: #0ea5e9;
+  --accent-900: #0369a1;
+
+  /* Success Colors */
+  --success-100: #d1fae5;
+  --success-300: #86efac;
+  --success-500: #22c55e; /* Success base */
+  --success-700: #15803d;
+  --success-900: #14532d;
+
+  /* Warning Colors */
+  --warning-100: #fef3c7;
+  --warning-300: #fcd34d;
+  --warning-500: #f59e0b; /* Warning base */
+  --warning-700: #b45309;
+  --warning-900: #78350f;
+
+  /* Danger Colors */
+  --danger-100: #fee2e2;
+  --danger-300: #fca5a5;
+  --danger-500: #ef4444; /* Danger base */
+  --danger-700: #b91c1c;
+  --danger-900: #7f1d1d;
+
+  /* Info Colors */
+  --info-100: #dbeafe;
+  --info-300: #93c5fd;
+  --info-500: #3b82f6; /* Info base */
+  --info-700: #1d4ed8;
+  --info-900: #1e3a8a;
+
+  /* Background Colors */
+  --bg-light: #f9fafb; /* Light background */
+  --bg-dark: #0d0d0d; /* Dark background */
+}
+
+.backgroundContainer,
+.mainDrawer,
+.drawer-open,
+.nowPlayingPlaylist,
+.nowPlayingContextMenu,
+html {
+  background-color: var(--bg-light);
+}
