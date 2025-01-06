@@ -57,6 +57,13 @@
   --sidebar-border: #202023; /* Sidebar border */
 
   --main-drawer-button-margin: 0px;
+
+  --primary-background-transparent: rgba(35, 35, 35, 0.5);
+  --secondary-background-transparent: rgba(0, 0, 0, 0.6);
+
+  --secondary-background-color: #181818;
+
+  --blur: 10px;
 }
 
 .backgroundContainer,
@@ -64,7 +71,7 @@
 .nowPlayingPlaylist,
 .nowPlayingContextMenu,
 html {
-  background-color: var(--bg-dark);
+  background-color: black;
 }
 
 /* Transparent top menu */
@@ -85,9 +92,6 @@ html {
   margin-top: auto;
   margin-bottom: auto;
 }
-.emby-tab-button {
-  padding: 1.75em 1.7em;
-}
 
 .mainDrawer {
   left: 0 !important;
@@ -95,7 +99,7 @@ html {
   width: 95px !important;
   transition: all 0.3s ease-in-out;
   border-right: var(--sidebar-border) solid 1px;
-  background-color: var(--sidebar-bg) !important;
+  background-color: transparent !important;
   z-index: 100;
 }
 
@@ -158,10 +162,6 @@ h3.sidebarHeader {
   translate: 100px;
 }
 
-.emby-tab-button.emby-button {
-  margin-right: 100px;
-}
-
 .featurediframe {
   padding-left: 40px !important;
 }
@@ -205,4 +205,70 @@ h3.sidebarHeader {
 
 .detailRibbon {
   background: transparent;
+}
+
+.headerHomeButton {
+  display: none;
+}
+
+.skinHeader {
+  background-color: transparent !important;
+}
+.layout-desktop .skinHeader,
+.layout-tv .skinHeader {
+  padding-top: 1.5em !important;
+}
+.layout-tv .skinHeader {
+  padding-bottom: 10px !important;
+}
+.headerTabs,
+.headerRight {
+  background-color: var(--primary-background-transparent) !important;
+  border-radius: 50px !important;
+  backdrop-filter: blur(var(--blur)) !important;
+}
+.layout-desktop .headerTabs,
+.layout-tv .headerTabs {
+  margin-bottom: 10px !important;
+}
+.layout-desktop .headerTabs {
+  margin-top: -58px !important;
+}
+
+.headerRight,
+.emby-tab-button {
+  height: 45px !important;
+}
+
+.headerTabs.sectionTabs {
+  font-size: 14px;
+}
+.emby-tab-button {
+  padding: 0px 20px !important;
+}
+
+.headerTabs,
+.headerRight {
+  background-color: var(--primary-background-transparent) !important;
+  border-radius: 50px !important;
+  backdrop-filter: blur(var(--blur)) !important;
+}
+.layout-desktop .headerTabs,
+.layout-tv .headerTabs {
+  margin-bottom: 10px !important;
+}
+.layout-desktop .headerTabs {
+  margin-top: -58px !important;
+  margin-right: 150px !important;
+}
+
+.layout-desktop .headerRight {
+  padding: 0px 5px !important;
+}
+.layout-tv .headerRight {
+  padding: 20px 10px !important;
+}
+.layout-desktop .headerLeft .layout-tv .headerLeft {
+  position: relative !important;
+  top: -17px !important;
 }
