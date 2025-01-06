@@ -98,7 +98,6 @@ html {
   top: 0;
   width: 95px !important;
   transition: all 0.3s ease-in-out;
-  border-right: var(--sidebar-border) solid 1px;
   background-color: transparent !important;
   z-index: 100;
 }
