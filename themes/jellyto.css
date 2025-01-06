@@ -138,21 +138,17 @@ h3.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
 
 span.navMenuOptionText {
   visibility: hidden;
-  transition: visibility 0.3s ease;
 }
 
 h3.sidebarHeader {
   visibility: hidden;
-  transition: visibility 0.3s ease;
 }
 
 .drawer-open > div > div .sidebarHeader {
   visibility: visible;
-  transition: visibility 0.3s ease;
 }
 .drawer-open > div > div .navMenuOptionText {
   visibility: visible;
-  transition: visibility 0.3s ease;
 }
 .headerRight {
   translate: -100px;
@@ -168,4 +164,45 @@ h3.sidebarHeader {
 
 .featurediframe {
   padding-left: 40px !important;
+}
+
+.sectionTitle {
+  color: white;
+}
+
+.homeSectionsContainer {
+  padding-top: 40px;
+}
+
+.section0 {
+  display: none;
+}
+
+.card.overflowBackdropCard.card-hoverable.card-withuserdata {
+  width: 30vw !important;
+}
+
+.layout-desktop,
+.touch-menu-la.transition {
+  transition: none;
+}
+
+.layout-mobile .mainDrawer {
+  padding-top: 1.2em;
+}
+
+.layout-desktop .hide-scroll .mainDrawer,
+.layout-desktop .hideMainDrawer .mainDrawer {
+  left: -250px !important;
+}
+
+/* detailPageContent */
+
+.detailPageSecondaryContainer.padded-bottom-page {
+  background-color: var(--sidebar-bg);
+  border-radius: 0.2em;
+}
+
+.detailRibbon {
+  background: transparent;
 }
